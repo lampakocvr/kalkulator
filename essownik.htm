@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pierwsze js</title>
+</head>
+<center>
+<br>
+<br>
+<br>
+<h1 style="color: #33bdef;">KALKULATOR</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="kalk" style="border: 2px solid #33bdef; width: 300px;">
+<strong><div id="ekran"></div></strong>
+</div><br>
+<div id="kalkk" style="border: 2px #33bdef solid; width: 300px;">
+<input type="button" name="guzik" id="g1" value='1' onclick="suma(this)">
+<input type="button" name="guzik" id="g2" value='2' onclick="suma(this)">
+<input type="button" name="guzik" id="g3" value='3' onclick="suma(this)"><br>
+<input type="button" name="guzik" id="g4" value='4' onclick="suma(this)">
+<input type="button" name="guzik" id="g5" value='5' onclick="suma(this)">
+<input type="button" name="guzik" id="g6" value='6' onclick="suma(this)"><br>
+<input type="button" name="guzik" id="g7" value='7' onclick="suma(this)">
+<input type="button" name="guzik" id="g8" value='8' onclick="suma(this)">
+<input type="button" name="guzik" id="g9" value='9' onclick="suma(this)"><br>
+<input type="button" name="guzik" id="g0" value='0' onclick="suma(this)">
+<input type="button" name="guzik" id="gp" value='+' onclick="suma(this)">
+<input type="button" name="guzik" id="gm" value='-' onclick="suma(this)"><br>
+<input type="button" name="guzik" id="gm" value='*' onclick="suma(this)">
+<input type="button" name="guzik" id="gm" value='/' onclick="suma(this)">
+<input type="button" name="guzik" id="gm" value='.' onclick="suma(this)">
+<input type="button" name="guzik" id="gpo" value='log' onclick="logarytm()"><br>
+<input type="button" name="guzik" id="gpo" value='potęga' onclick="potega()">
+<input type="button" name="guzik" id="gpo" value='pierwiastek' onclick="pierwiastek()">
+<input type="button" value="oblicz" onclick="wynik()">
+<input type="button" value="clear" onclick="wyczysc()">
+</div>
+<h2 style="color: #33bdef;">kalkulator stworzony przez Igora Wójtowicza z 1TP</h1>
+<script>
+function suma(x)
+{
+var napis=x.value;
+document.getElementById('ekran').innerText +=napis;
+}
+
+function wynik()
+{
+	var w = eval(document.getElementById('ekran').innerText);
+	document.getElementById('ekran').innerText = w;
+}
+function wyczysc()
+{
+	document.getElementById('ekran').innerHTML = "";
+}
+function logarytm()
+{
+	var logarytm = Number(document.getElementById('ekran').innerText);
+	var wynikLog = Math.log(logarytm);
+	document.getElementById('ekran').innerText = wynikLog;
+}
+function potega()
+{
+	var potega = Number(document.getElementById('ekran').innerText);
+	var potegaWynik = Math.pow(potega, 2);
+	document.getElementById('ekran').innerText = potegaWynik;
+}
+function pierwiastek()
+{
+	var pierwiastek = Number(document.getElementById('ekran').innerText);
+	var pierwiastekWynik = Math.sqrt(pierwiastek);
+	document.getElementById('ekran').innerText = pierwiastekWynik;
+}
+</script>
+<style>
+input[type=button] {
+	background-color:#33bdef;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:30px;
+	font-weight:bold;
+	padding:1px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #019ad2;
+}
+input[type=button]:hover {
+	background-color:#019ad2;
+}
+input[type=button]:active {
+	position:relative;
+	top:1px;
+}
+body {
+background-color: black
+}
+div {
+color: #33bdef;
+size: 30px;
+}
+
+</style>
+<body>
+
+</body>
+</html>
